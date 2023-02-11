@@ -2,7 +2,7 @@ import streamlit as st
 import time
 from inference import Inference, generate_text
 from PIL import Image
-from streamlit_extras.add_vertical_space import add_vertical_space
+# from streamlit_extras.add_vertical_space import add_vertical_space
 
 # streamlit run app_v2.py --server.fileWatcherType none
 # openai.API key
@@ -34,7 +34,7 @@ with st.sidebar:
 
 st.write("<style>h1{text-align:center;}</style>", unsafe_allow_html=True)
 st.title(":male-doctor: Medical image Q&A system")
-add_vertical_space(2)
+# add_vertical_space(2)
 
 option = st.sidebar.selectbox(
     "Use an example image if you don't have one",
