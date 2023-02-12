@@ -79,3 +79,4 @@ if option == 'Use example':
                     st.text_area("Respond:", generated_text, height=250)
             except Exception as e:
                 st.write('Please try again.')
+                st.write(e)
