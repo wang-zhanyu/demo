@@ -6,3 +6,4 @@ requests
 numpy
 torchxrayvision
 torchvision
+io
