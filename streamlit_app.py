@@ -8,7 +8,7 @@ from PIL import Image
 # openai.API key
 model = "text-davinci-003"
 api_key = "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" #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
-path = "/home/zhanyu_wang/data/iu_xray/images/CXR2501_IM-1027/0.png"
+path = "https://raw.githubusercontent.com/wang-zhanyu/demo/master/images/0.png"
 st.set_page_config(
     page_title="MedChatGPT",
     page_icon=":smile:",
