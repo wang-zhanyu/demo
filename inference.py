@@ -26,7 +26,7 @@ detection_model = xrv.models.DenseNet(weights="densenet121-res224-rsna")
 detection_model.to(device)
 
 
-@st.cache(show_spinner=False)
+# @st.cache(show_spinner=False)
 def Inference(image, num_beams=3):
     image = BytesIO(requests.get(image).content)
     with Image.open(image) as pil:
