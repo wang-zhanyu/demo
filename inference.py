@@ -9,6 +9,8 @@ from transformers import SwinForImageClassification
 import torch.nn as nn
 import torchxrayvision as xrv
 import torch, torchvision
+import requests
+from io import BytesIO
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 image_processor = ViTImageProcessor.from_pretrained("google/vit-base-patch16-224-in21k")
@@ -27,6 +29,7 @@ detection_model.to(device)
 
 @st.cache(show_spinner=False)
 def Inference(image, num_beams=3):
+    image = BytesIO(requests.get(image).content)
     with Image.open(image) as pil:
         array = np.array(pil, dtype=np.uint8)
         if array.shape[-1] != 3 or len(array.shape) != 3:
