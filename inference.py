@@ -9,7 +9,6 @@ from transformers import SwinForImageClassification
 import torch.nn as nn
 import torchxrayvision as xrv
 import torch, torchvision
-import requests
 from io import BytesIO
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

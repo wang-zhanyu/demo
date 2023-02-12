@@ -7,7 +7,7 @@ from PIL import Image
 # streamlit run app_v2.py --server.fileWatcherType none
 # openai.API key
 model = "text-davinci-003"
-api_key = "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" #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
+api_key = "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"
 path = "https://raw.githubusercontent.com/wang-zhanyu/demo/master/images/0.png"
 st.set_page_config(
     page_title="MedChatGPT",
